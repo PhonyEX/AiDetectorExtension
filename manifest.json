@@ -1,21 +1,19 @@
 {
   "manifest_version": 3,
-  "name": "AI DetectorTest",
+  "name": "PocketAI Detector Test",
   "description": "Input any text and get feedback on how much of the text could possibly be written by AI...",
   "version": "1.0",
   "action": {
-    "default_popup": "popup/popup.html"
+    "default_popup": "popup.html"
   },
   "icons": {
-      "16": "icons/icon.png",
-      "48": "icons/icon (1).png",
-      "128": "icons/icon (2).png"
+    "16": "icon.png",
+    "48": "iconm.png",
+    "128": "iconl.png"
   },
   "background": {
-    "service-worker": ["background.js"],
+    "service_worker": "background.js",
     "type": "module"
   },
-  "permissions": [
-    "storage"
-  ]
+  "permissions": ["storage"]
 }

@@ -8,16 +8,23 @@
         height: 250px;
         padding: 10px;
         font-family: "Lexend", sans-serif;
-        background: rgb(94, 94, 225);
+        background: rgb(86, 45, 133);
         color: white;
         text-align: center
       }
       textarea {
         width: 100%;
+        font-family: "Lexend", sans-serif; 
         height: 100px;
         resize: none;
         margin-bottom: 10px;
         padding: 2px; 
+        background: transparent; 
+        border-bottom: 4px solid white;
+        border-top: 0px; 
+        border-left: 0px; 
+        border-right: 0px; 
+        color: white;  
       }
       
       textarea:focus { 
@@ -27,18 +34,42 @@
         padding: 5px 10px;
         margin-bottom: 11px; 
       }
+
+      ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(193, 193, 193);
+  opacity: 1; /* Firefox */
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(132, 130, 130);
+}
+
     </style>
   </head>
 
   <body>
-    <h1>PocketAI Detection Tool</h3>
-    <p>Enter the text to detect AI in your writing (8000 word limit). </p>
+    <img src = "./biggies.png" width = 100>
+    <h1>PocketAI</h3>
+    <p>Enter the text to detect AI in your writing (8000 word limit). Wait 2-3 seconds for results to load. </p>
     <textarea
       id="inputText"
       maxlength="8000"
       placeholder="Enter your text here...."
     ></textarea>
-    <button id="detectButton">Detect AI</button>
+    <button id="detectButton">Start AI Detection</button>
+
     <div id="result">Click the button above to see your results! The lower the score, the lower chance of AI being detected!</div>
     <br>
   </body>

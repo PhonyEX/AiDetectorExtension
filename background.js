@@ -1,4 +1,4 @@
-const apiKey = "IGKG0A8DQ3GDU3LOG19WQ19NRACM1997";
+const apiKey = "QY21KK1KOQ8Z098CS63OCMZLFHLL1ADY";
 
 /* chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === 'detectAI') {
@@ -41,15 +41,9 @@ chrome.runtime.onMessage.addListener(async (data) => {
       });
 
       const finres = await res.json();
-      console.log("Score: " + finres.score);
+      console.log("Response: " + JSON.stringify(finres));
 
-      chrome.storage.local.set({
-        "score": finres.score,
-      }, () => { 
-         console.log("Score updated!")
-      });
-
-
+      chrome.storage.local.set(finres);
     }
   } catch (e) {
     console.log(e.message);

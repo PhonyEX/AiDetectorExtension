@@ -2,9 +2,6 @@ const text = document.getElementById("inputText");
 const result = document.getElementById("result");
 const button = document.getElementById("detectButton");
 
-/* trust me on this thouhg this code may seem goofed up */
-
-
 button.onclick = () => {
   const prefs = {
     text: text.value,
